@@ -338,12 +338,6 @@ body.life {
 .company-line { margin: 6px 0 0; font-size: 15px; color: var(--muted); }
 .company-line strong { color: var(--text); font-weight: 600; }
 
-/* Nested client engagement under own company */
-.t-engagement { margin-top: 12px; padding: 12px 14px; background: var(--bg-alt); border: 1px solid var(--line); border-left: 3px solid var(--accent); border-radius: 10px; }
-.t-eng-label { display: block; font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: .08em; color: var(--accent); margin-bottom: 4px; }
-.t-engagement h4 { margin: 0; font-size: 15px; font-weight: 600; }
-.t-contract { font-weight: 500; color: var(--muted); }
-.t-engagement .t-org { font-size: 14px; }
 
 /* ---------- Company logos ---------- */
 .logo-tile {
@@ -360,7 +354,6 @@ body.life {
 
 .timeline li.has-logo { display: grid; grid-template-columns: 76px 1fr; gap: 16px; align-items: start; }
 .timeline li.has-logo .logo-tile { margin-top: -6px; }
-.timeline li.has-logo .t-engagement .logo-tile { margin-top: 0; }
 
 .project .p-org { display: flex; align-items: center; gap: 10px; }
 
