@@ -396,3 +396,42 @@ body.life {
   .ls-row { justify-content: flex-start; gap: 18px 28px; }
   .ls-pwc img { height: 28px; } .ls-sand img, .ls-ibm img { height: 19px; } .ls-cog img { height: 21px; } .ls-jam img { height: 26px; }
 }
+
+/* ---------- Logo strip: continuous loop (marquee) ---------- */
+.marquee {
+  flex: 1; min-width: 0; overflow: hidden;
+  -webkit-mask-image: linear-gradient(90deg, transparent 0, #000 8%, #000 92%, transparent 100%);
+          mask-image: linear-gradient(90deg, transparent 0, #000 8%, #000 92%, transparent 100%);
+}
+.marquee-track { display: flex; width: max-content; animation: ls-scroll 26s linear infinite; }
+.marquee:hover .marquee-track { animation-play-state: paused; }
+.marquee .ls-row { flex: none; flex-wrap: nowrap; justify-content: flex-start; gap: 64px; padding-right: 64px; }
+@keyframes ls-scroll { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+
+@media (max-width: 720px) {
+  .marquee { width: 100%; }
+  .marquee .ls-row { gap: 44px; padding-right: 44px; }
+  .marquee-track { animation-duration: 20s; }
+}
+/* visitors who prefer less motion: static, wrapped row, no duplicate */
+@media (prefers-reduced-motion: reduce) {
+  .marquee { -webkit-mask-image: none; mask-image: none; }
+  .marquee-track { animation: none; width: auto; }
+  .marquee .ls-row { flex-wrap: wrap; gap: 22px 36px; padding-right: 0; }
+  .marquee .ls-row[aria-hidden="true"] { display: none; }
+}
+
+/* Life post extras */
+.post-body .bn { font-family: "Noto Serif Bengali", serif; }
+.post-body .about-list { margin: 0 0 18px; padding-left: 20px; }
+.post-body .about-list li { margin-bottom: 8px; }
+.post-card img { aspect-ratio: 16 / 9; }
+.post-card img, .post-cover img { height: auto; }
+
+/* Life: "A few things about me" */
+.about-me { padding: 8px 0 40px; }
+.me-list { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; }
+.me-list li { background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); padding: 18px 20px; font-size: 15px; color: var(--muted); }
+.me-k { display: block; font-size: 17px; font-weight: 700; color: var(--accent); margin-bottom: 4px; }
+@media (max-width: 900px) { .me-list { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 720px) { .me-list { grid-template-columns: 1fr; } }
