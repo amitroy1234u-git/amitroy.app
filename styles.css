@@ -292,3 +292,107 @@ body.life {
   .posts, .gallery { grid-template-columns: 1fr; }
   .post-body { font-size: 17px; }
 }
+
+/* ---------- Case studies ---------- */
+.cases { display: grid; gap: 20px; }
+.case { background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); padding: 30px; box-shadow: var(--shadow); }
+.case-head h3 { font-size: clamp(20px, 2.4vw, 24px); margin-bottom: 4px; }
+.case-grid { display: grid; grid-template-columns: 1.15fr 1fr; gap: 36px; margin: 18px 0 20px; }
+.case h4 { font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: .1em; color: var(--muted); margin: 18px 0 8px; }
+.case-grid > div > h4:first-child { margin-top: 0; }
+.case p { margin: 0; font-size: 15px; }
+.case ul:not(.outcomes) { margin: 0; padding-left: 18px; font-size: 15px; color: var(--muted); }
+.case ul:not(.outcomes) li { margin-bottom: 6px; }
+
+/* architecture flow */
+.flow { list-style: none; margin: 0; padding: 0; }
+.flow li {
+  position: relative; display: grid; grid-template-columns: 96px 1fr; gap: 10px; align-items: center;
+  padding: 9px 12px; margin-bottom: 18px; font-size: 14px;
+  background: var(--bg-alt); border: 1px solid var(--line); border-radius: 10px;
+}
+.flow li:last-child { margin-bottom: 0; }
+.flow li:not(:last-child)::after {
+  content: "↓"; position: absolute; left: 50%; bottom: -18px; transform: translateX(-50%);
+  font-size: 13px; line-height: 18px; color: var(--accent);
+}
+.flow li span { font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: .08em; color: var(--accent); }
+
+/* outcome tiles */
+.outcomes { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; }
+.outcomes li { background: var(--accent-soft); border-radius: 10px; padding: 12px; }
+.outcomes strong { display: block; font-size: 22px; font-weight: 800; letter-spacing: -.02em; color: var(--accent); line-height: 1.15; }
+.outcomes span { display: block; font-size: 12.5px; color: var(--muted); line-height: 1.35; margin-top: 2px; }
+.outcome-note { margin-top: 12px !important; font-size: 14px !important; color: var(--muted); }
+
+
+@media (max-width: 900px) {
+  .case-grid { grid-template-columns: 1fr; gap: 8px; }
+}
+@media (max-width: 720px) {
+  .case { padding: 22px 18px; }
+  .flow li { grid-template-columns: 1fr; gap: 2px; }
+}
+
+/* Own company line in hero */
+.company-line { margin: 6px 0 0; font-size: 15px; color: var(--muted); }
+.company-line strong { color: var(--text); font-weight: 600; }
+
+/* Nested client engagement under own company */
+.t-engagement { margin-top: 12px; padding: 12px 14px; background: var(--bg-alt); border: 1px solid var(--line); border-left: 3px solid var(--accent); border-radius: 10px; }
+.t-eng-label { display: block; font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: .08em; color: var(--accent); margin-bottom: 4px; }
+.t-engagement h4 { margin: 0; font-size: 15px; font-weight: 600; }
+.t-contract { font-weight: 500; color: var(--muted); }
+.t-engagement .t-org { font-size: 14px; }
+
+/* ---------- Company logos ---------- */
+.logo-tile {
+  flex-shrink: 0; display: inline-flex; align-items: center; justify-content: center;
+  width: 76px; height: 44px; padding: 7px 9px; border-radius: 10px;
+  background: #ffffff; border: 1px solid var(--line);
+  box-shadow: 0 1px 2px rgba(15, 23, 42, .05);
+}
+.logo-tile img { max-width: 100%; max-height: 100%; object-fit: contain; display: block; }
+.logo-tile.mono { background: var(--accent-soft); color: var(--accent); font-weight: 800; font-size: 15px; letter-spacing: .02em; border-color: transparent; }
+.logo-tile.sm { width: 54px; height: 30px; padding: 4px 6px; border-radius: 7px; }
+.logo-tile.sm.mono { font-size: 12px; }
+.logo-tile.xs { width: 42px; height: 22px; padding: 3px 5px; border-radius: 6px; margin-right: 8px; vertical-align: -5px; }
+
+.timeline li.has-logo { display: grid; grid-template-columns: 76px 1fr; gap: 16px; align-items: start; }
+.timeline li.has-logo .logo-tile { margin-top: -6px; }
+.timeline li.has-logo .t-engagement .logo-tile { margin-top: 0; }
+
+.project .p-org { display: flex; align-items: center; gap: 10px; }
+
+@media (max-width: 720px) {
+  .timeline li.has-logo { grid-template-columns: 54px 1fr; gap: 12px; }
+  .timeline li.has-logo > .logo-tile { width: 54px; height: 34px; padding: 5px 6px; }
+}
+
+/* ---------- "Experience with" logo strip (hero) ---------- */
+.logo-strip { margin-top: 44px; display: flex; align-items: center; gap: 28px; flex-wrap: wrap; }
+.ls-label { margin: 0; font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: .12em; color: var(--muted); white-space: nowrap; }
+.ls-row { list-style: none; margin: 0; padding: 0; flex: 1; display: flex; align-items: center; justify-content: space-between; gap: 22px 36px; flex-wrap: wrap; }
+.ls-row li { display: flex; align-items: center; gap: 8px; }
+.ls-row img { display: block; width: auto; filter: grayscale(1); opacity: .6; transition: filter .25s ease, opacity .25s ease; }
+.ls-row li:hover img { filter: none; opacity: 1; }
+.ls-pwc img { height: 32px; }
+.ls-sand img { height: 22px; }
+.ls-jam img { height: 30px; }
+.ls-jam span { font-family: Georgia, "Times New Roman", serif; font-size: 16px; font-weight: 600; color: var(--muted); white-space: nowrap; opacity: .9; transition: color .25s ease; }
+.ls-jam:hover span { color: #1e3f78; }
+.ls-cog img { height: 24px; }
+.ls-ibm img { height: 22px; }
+
+/* dark mode: render all marks as soft white silhouettes so dark wordmarks stay visible */
+@media (prefers-color-scheme: dark) {
+  .ls-row img { filter: grayscale(1) brightness(0) invert(1); opacity: .55; }
+  .ls-row li:hover img { filter: grayscale(1) brightness(0) invert(1); opacity: .95; }
+  .ls-jam:hover span { color: var(--text); }
+}
+
+@media (max-width: 720px) {
+  .logo-strip { margin-top: 32px; gap: 14px; flex-direction: column; align-items: flex-start; }
+  .ls-row { justify-content: flex-start; gap: 18px 28px; }
+  .ls-pwc img { height: 28px; } .ls-sand img, .ls-ibm img { height: 19px; } .ls-cog img { height: 21px; } .ls-jam img { height: 26px; }
+}
