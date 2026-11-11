@@ -1,0 +1,86 @@
+<!doctype html>
+<!--
+  TEMPLATE for a Life post (not published — the templates/ folder is excluded from deploys).
+  To publish a post:
+    1. Copy this file to life/<slug>/index.html  (e.g. life/georgia-2026/index.html)
+    2. Put resized photos (~1600px wide, JPG/WebP) in life/<slug>/  and reference them by filename
+    3. Replace every {{PLACEHOLDER}}
+    4. Add a matching .post-card at the top of #posts in life/index.html:
+         <a class="post-card" href="<slug>/">
+           <img src="<slug>/cover.jpg" alt="..." loading="lazy">
+           <div class="pc-body">
+             <span class="meta">{{PLACE}} · {{MONTH YEAR}}</span>
+             <h2>{{TITLE}}</h2>
+             <p>{{ONE-LINE SUMMARY}}</p>
+           </div>
+         </a>
+-->
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{TITLE}} · Amit Roy</title>
+  <meta name="description" content="{{ONE-LINE SUMMARY}}">
+  <link rel="canonical" href="https://amitroy.app/life/{{SLUG}}/">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="{{TITLE}}">
+  <meta property="og:description" content="{{ONE-LINE SUMMARY}}">
+  <meta property="og:url" content="https://amitroy.app/life/{{SLUG}}/">
+  <meta property="og:image" content="https://amitroy.app/life/{{SLUG}}/cover.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="theme-color" content="#0f172a">
+  <link rel="icon" href="../../assets/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../styles.css">
+</head>
+<body class="life">
+  <a class="skip" href="#main">Skip to content</a>
+
+  <header class="nav">
+    <div class="wrap nav-inner">
+      <a class="brand" href="../../" aria-label="Amit Roy, home">AR<span>.</span></a>
+      <nav aria-label="Sections">
+        <span class="switch" role="group" aria-label="Site section">
+          <a href="../../">Work</a>
+          <a href="../" aria-current="page">Life</a>
+        </span>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <article class="post">
+      <div class="wrap">
+        <a class="back" href="../">← All stories</a>
+        <header class="post-head">
+          <span class="meta">{{PLACE}} · {{MONTH YEAR}}</span>
+          <h1>{{TITLE}}</h1>
+        </header>
+
+        <figure class="post-cover">
+          <img src="cover.jpg" alt="{{COVER ALT TEXT}}">
+        </figure>
+
+        <div class="post-body">
+          <p>{{PARAGRAPH}}</p>
+          <p>{{PARAGRAPH}}</p>
+
+          <div class="gallery">
+            <figure><img src="photo-1.jpg" alt="{{ALT}}" loading="lazy"><figcaption>{{CAPTION}}</figcaption></figure>
+            <figure><img src="photo-2.jpg" alt="{{ALT}}" loading="lazy"><figcaption>{{CAPTION}}</figcaption></figure>
+          </div>
+
+          <h2>{{SUBHEADING}}</h2>
+          <p>{{PARAGRAPH}}</p>
+        </div>
+      </div>
+    </article>
+  </main>
+
+  <footer class="footer">
+    <div class="wrap">© 2026 Amit Roy · <a href="../../">Work</a> · <a href="../">Life</a></div>
+  </footer>
+</body>
+</html>

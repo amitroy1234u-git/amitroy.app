@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Life · Amit Roy</title>
+  <meta name="description" content="Travel, places and life outside work — by Amit Roy, Dubai.">
+  <link rel="canonical" href="https://amitroy.app/life/">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Life · Amit Roy">
+  <meta property="og:description" content="Travel, places and life outside work.">
+  <meta property="og:url" content="https://amitroy.app/life/">
+  <meta property="og:image" content="https://amitroy.app/assets/amit-roy.jpg">
+  <meta name="theme-color" content="#0f172a">
+  <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body class="life">
+  <a class="skip" href="#main">Skip to content</a>
+
+  <header class="nav">
+    <div class="wrap nav-inner">
+      <a class="brand" href="../" aria-label="Amit Roy, home">AR<span>.</span></a>
+      <nav aria-label="Sections">
+        <span class="switch" role="group" aria-label="Site section">
+          <a href="../">Work</a>
+          <a href="./" aria-current="page">Life</a>
+        </span>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="life-hero">
+      <div class="wrap">
+        <p class="eyebrow"><span class="dot" aria-hidden="true"></span> Dubai, UAE</p>
+        <h1>Life</h1>
+        <p class="lede">Travel, places, food and the things I enjoy when I'm not building data platforms.</p>
+      </div>
+    </section>
+
+    <section class="section" style="padding-top: 24px;">
+      <div class="wrap">
+        <!-- POSTS: newest first. Copy a .post-card block for each new post. -->
+        <div class="posts" id="posts">
+        </div>
+
+        <div class="empty" id="empty">
+          <strong>First stories coming soon.</strong>
+          Trips, photos and notes from life outside work.
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="wrap">© <span id="yr">2026</span> Amit Roy · <a href="../">Work</a> · <a href="./">Life</a></div>
+  </footer>
+
+  <script>
+    document.getElementById('yr').textContent = new Date().getFullYear();
+    if (document.querySelector('#posts .post-card')) document.getElementById('empty').hidden = true;
+  </script>
+</body>
+</html>
