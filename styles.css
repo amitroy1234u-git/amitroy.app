@@ -615,3 +615,34 @@ details.more ul li { margin-bottom: 6px; }
   .orbit { display: grid; grid-template-columns: repeat(3, auto); justify-content: center; gap: 8px; }
   .orbit .float-chip { text-align: center; }
 }
+
+/* ---------- Life hero: rotating travel photo + warm glow ---------- */
+.life-hero.has-bg { position: relative; isolation: isolate; overflow: hidden; min-height: 460px; display: flex; align-items: flex-end; padding: 140px 0 56px; }
+.life-bg { position: absolute; inset: 0; z-index: -1; pointer-events: none; }
+.life-bg img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; opacity: .9; animation: kenburns 24s ease-in-out infinite alternate; }
+@keyframes kenburns { from { transform: scale(1); } to { transform: scale(1.1); } }
+.blob.w1 { width: 520px; height: 520px; background: #ea580c; top: -180px; left: -140px; opacity: .22; }
+.blob.w2 { width: 440px; height: 440px; background: #e11d48; top: 60px; right: -160px; opacity: .16; animation-duration: 22s; }
+.blob.w3 { width: 380px; height: 380px; background: #f59e0b; bottom: -200px; left: 40%; opacity: .14; animation-duration: 26s; }
+.life-shade { position: absolute; inset: 0; background: linear-gradient(180deg, rgba(11,17,32,.05) 0%, rgba(11,17,32,.25) 40%, rgba(11,17,32,.78) 80%, var(--bg) 100%), linear-gradient(90deg, rgba(11,17,32,.55) 0%, rgba(11,17,32,.1) 60%); }
+.life-hero.has-bg h1 { font-size: clamp(48px, 8vw, 84px); text-shadow: 0 4px 30px rgba(0,0,0,.45); }
+.life-hero.has-bg .lede { color: #dbe3ef; text-shadow: 0 2px 12px rgba(0,0,0,.5); max-width: 56ch; }
+.life-bg-caption {
+  position: absolute; right: 20px; bottom: 18px; z-index: 1; font-size: 12px; font-weight: 600; color: #e5e7eb;
+  padding: 6px 12px; border-radius: 999px; background: rgba(11,17,32,.55); border: 1px solid rgba(255,255,255,.15);
+  backdrop-filter: blur(6px); -webkit-backdrop-filter: blur(6px);
+}
+.life-bg-caption:hover { text-decoration: none; color: #fff; border-color: var(--accent); }
+@media (max-width: 720px) {
+  .life-hero.has-bg { min-height: 380px; padding: 110px 0 48px; }
+  .life-bg-caption { right: 12px; bottom: 12px; font-size: 11px; }
+}
+@media (prefers-reduced-motion: reduce) { .life-bg img { animation: none; } }
+.life-bg-caption { margin: 0; display: flex; align-items: center; gap: 6px; flex-wrap: wrap; justify-content: flex-end; }
+.life-bg-caption a { color: #e5e7eb; }
+.life-bg-caption a:hover { color: #fff; text-decoration: none; }
+.life-bg-caption .sep { opacity: .5; }
+.life-bg-caption .credit { font-weight: 500; opacity: .75; font-size: 11px; }
+.life-bg img { opacity: 1; }
+@media (max-width: 720px) { .life-bg-caption { left: 12px; } }
+@media (max-width: 720px) { .life-hero.has-bg { padding-bottom: 92px; } .life-bg-caption { gap: 2px 6px; } }
