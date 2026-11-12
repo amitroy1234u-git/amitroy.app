@@ -57,20 +57,36 @@
   <main id="main">
     <!-- HERO -->
     <section class="hero" id="top">
+      <div class="hero-bg" aria-hidden="true"><span class="blob b1"></span><span class="blob b2"></span><span class="blob b3"></span><span class="grid"></span></div>
       <div class="wrap hero-grid">
         <div>
           <p class="eyebrow"><span class="dot" aria-hidden="true"></span> Dubai, UAE</p>
+          <p class="hello">Hi, I'm</p>
           <h1>Amit Roy</h1>
+          <p class="tagline">I turn messy, multi-system data into <span class="grad">decisions leaders trust.</span></p>
           <p class="role">Data Solutions Manager · Senior Data Engineer</p>
           <p class="company-line">Founder, <strong>Prokriti Information Technology Consultancy</strong></p>
-          <p class="lede">I design and deliver enterprise data platforms, lakehouses and executive-grade analytics on Azure, Databricks and Power BI, turning messy, multi-system data into decisions leaders can trust.</p>
+          <p class="lede">Enterprise data platforms, lakehouses and executive-grade analytics on Azure, Databricks and Power BI.</p>
           <div class="cta-row">
             <a class="btn btn-primary" href="#contact">Get in touch</a>
             <a class="btn btn-ghost" href="https://www.linkedin.com/in/amit-roy-08271a39" target="_blank" rel="noopener">LinkedIn ↗</a>
           </div>
         </div>
-        <div class="portrait">
-          <img src="assets/amit-roy.jpg" alt="Portrait of Amit Roy" width="272" height="273">
+        <div class="portrait-wrap">
+          <div class="portrait">
+            <img src="assets/amit-roy.jpg" alt="Portrait of Amit Roy" width="272" height="273">
+          </div>
+          <div class="orbit" aria-label="Core technologies">
+            <span class="float-chip" style="left:-2px;top:19px;--dot:#ff3621;animation-delay:-0.0s">Databricks</span>
+            <span class="float-chip" style="left:100px;top:-39px;--dot:#3b9cff;animation-delay:-0.7s">Azure</span>
+            <span class="float-chip" style="left:216px;top:-19px;--dot:#f2c811;animation-delay:-1.4s">Power BI</span>
+            <span class="float-chip" style="left:292px;top:71px;--dot:#22c49a;animation-delay:-2.1s">Microsoft Fabric</span>
+            <span class="float-chip" style="left:292px;top:189px;--dot:#00b8e0;animation-delay:-2.8s">Delta Lake</span>
+            <span class="float-chip" style="left:216px;top:279px;--dot:#f0782c;animation-delay:-3.5s">PySpark</span>
+            <span class="float-chip" style="left:100px;top:299px;--dot:#ffd43b;animation-delay:-4.2s">Python</span>
+            <span class="float-chip" style="left:-2px;top:241px;--dot:#ef4444;animation-delay:-4.9s">SQL</span>
+            <span class="float-chip" style="left:-42px;top:130px;--dot:#ff9900;animation-delay:-5.6s">AWS</span>
+          </div>
         </div>
       </div>
 
@@ -100,10 +116,10 @@
 
       <div class="wrap">
         <ul class="stats" aria-label="Highlights">
-          <li><strong>13</strong><span>years in data &amp; analytics</span></li>
+          <li><strong data-count="13">13</strong><span>years in data &amp; analytics</span></li>
           <li><strong>Big 4</strong><span>consulting with PwC &amp; Strategy&amp;</span></li>
-          <li><strong>20+</strong><span>clients served</span></li>
-          <li><strong>4</strong><span>regions: UAE · USA · Europe · India</span></li>
+          <li><strong data-count="20" data-suffix="+">20+</strong><span>clients served</span></li>
+          <li><strong data-count="4">4</strong><span>regions: UAE · USA · Europe · India</span></li>
         </ul>
       </div>
     </section>
@@ -111,7 +127,7 @@
     <!-- ABOUT -->
     <section class="section" id="about">
       <div class="wrap two-col">
-        <h2 class="section-title">About</h2>
+        <header class="sec-head"><p class="kicker">About</p><h2>13 years of turning data into decisions.</h2></header>
         <div class="prose">
           <p>I'm a Senior Data &amp; Analytics Engineer with 13 years of experience designing and delivering enterprise BI, cloud data platforms and AI-enabled solutions. I work across the Azure Data Platform, Databricks, the SQL Server BI stack, Power BI, Salesforce Analytics and SAP Analytics Cloud, and I lead solutions end to end, from architecture through to production.</p>
           <p>I partner with senior stakeholders across the UAE, USA, Europe and India to build scalable, governance-ready platforms. My focus is high-performance, cost-optimised, production-grade delivery, along with mentoring the engineers who run these platforms day to day.</p>
@@ -122,31 +138,37 @@
     <!-- EXPERTISE -->
     <section class="section alt" id="expertise">
       <div class="wrap">
-        <h2 class="section-title">Expertise</h2>
+        <header class="sec-head"><p class="kicker">Expertise</p><h2>What I work with</h2></header>
         <div class="cards">
           <article class="card">
+            <span class="card-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3 3 8l9 5 9-5-9-5Z"/><path d="m3 13 9 5 9-5"/><path d="m3 17.5 9 5 9-5"/></svg></span>
             <h3>Lakehouse &amp; Data Engineering</h3>
-            <p>Databricks Lakehouse, Delta Lake, Delta Live Tables, Unity Catalog, medallion architecture, Auto Loader, Azure Data Factory, PySpark, Spark SQL, Microsoft Fabric.</p>
+            <p class="chips"><span>Databricks Lakehouse</span><span>Delta Lake</span><span>Delta Live Tables</span><span>Unity Catalog</span><span>Medallion architecture</span><span>Auto Loader</span><span>Azure Data Factory</span><span>PySpark</span><span>Spark SQL</span><span>Microsoft Fabric</span></p>
           </article>
           <article class="card">
+            <span class="card-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="12" cy="5" rx="8" ry="3"/><path d="M4 5v6c0 1.7 3.6 3 8 3s8-1.3 8-3V5"/><path d="M4 11v6c0 1.7 3.6 3 8 3s8-1.3 8-3v-6"/></svg></span>
             <h3>Data Architecture &amp; Modelling</h3>
-            <p>Enterprise data warehouses, dimensional modelling, SSAS (Tabular &amp; Multidimensional), DAX, MDX, Erwin, governance and RBAC design.</p>
+            <p class="chips"><span>Enterprise data warehouses</span><span>Dimensional modelling</span><span>SSAS (Tabular &amp; Multidimensional)</span><span>DAX</span><span>MDX</span><span>Erwin</span><span>Governance and RBAC design</span></p>
           </article>
           <article class="card">
+            <span class="card-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20V10"/><path d="M10 20V4"/><path d="M16 20v-7"/><path d="M22 20H2"/></svg></span>
             <h3>BI &amp; Executive Analytics</h3>
-            <p>Power BI (incl. Direct Lake), SSRS, Tableau, Salesforce Analytics Studio, SAP Analytics Cloud, FP&amp;A and performance reporting.</p>
+            <p class="chips"><span>Power BI (incl. Direct Lake)</span><span>SSRS</span><span>Tableau</span><span>Salesforce Analytics Studio</span><span>SAP Analytics Cloud</span><span>FP&amp;A and performance reporting</span></p>
           </article>
           <article class="card">
+            <span class="card-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v4M12 17v4M3 12h4M17 12h4"/><path d="m6 6 2.5 2.5M15.5 15.5 18 18M18 6l-2.5 2.5M8.5 15.5 6 18"/><circle cx="12" cy="12" r="2.5"/></svg></span>
             <h3>AI &amp; Automation</h3>
-            <p>Databricks Mosaic AI, RAG solutions, Copilot-enabled workflows, Power Automate and Power Apps agents.</p>
+            <p class="chips"><span>Databricks Mosaic AI</span><span>RAG solutions</span><span>Copilot-enabled workflows</span><span>Power Automate and Power Apps agents</span></p>
           </article>
           <article class="card">
+            <span class="card-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M7 18h10a4 4 0 0 0 .5-7.97A6 6 0 0 0 6 9.5 4.25 4.25 0 0 0 7 18Z"/></svg></span>
             <h3>Cloud &amp; Platforms</h3>
-            <p>Azure SQL / DW, ADLS Gen2, SQL Server, Oracle, SAP HANA, AWS (S3, Athena, Glue, Lambda, Step Functions), CI/CD.</p>
+            <p class="chips"><span>Azure SQL / DW</span><span>ADLS Gen2</span><span>SQL Server</span><span>Oracle</span><span>SAP HANA</span><span>AWS (S3, Athena, Glue, Lambda, Step Functions)</span><span>CI/CD</span></p>
           </article>
           <article class="card">
+            <span class="card-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="8" r="3.5"/><path d="M2.5 20a6.5 6.5 0 0 1 13 0"/><circle cx="17.5" cy="9" r="2.5"/><path d="M16 14.2a5 5 0 0 1 6 4.8"/></svg></span>
             <h3>Delivery &amp; Leadership</h3>
-            <p>Solution architecture, team leadership, stakeholder management, onshore–offshore delivery, large-scale data migration. Python, SQL, C#.</p>
+            <p class="chips"><span>Solution architecture</span><span>Team leadership</span><span>Stakeholder management</span><span>Onshore–offshore delivery</span><span>Large-scale data migration</span><span>Python</span><span>SQL</span><span>C#</span></p>
           </article>
         </div>
       </div>
@@ -155,7 +177,7 @@
     <!-- EXPERIENCE -->
     <section class="section" id="experience">
       <div class="wrap two-col">
-        <h2 class="section-title">Experience</h2>
+        <header class="sec-head"><p class="kicker">Experience</p><h2>Where I've worked</h2></header>
         <ol class="timeline">
           <li class="has-logo">
             <span class="logo-tile mono" role="img" aria-label="Prokriti Information Technology Consultancy">P</span>
@@ -220,72 +242,84 @@
     <!-- PROJECTS -->
     <section class="section alt" id="projects">
       <div class="wrap">
-        <h2 class="section-title">Selected work</h2>
+        <header class="sec-head"><p class="kicker">Selected work</p><h2>Projects I have led and built</h2></header>
         <div class="projects">
           <article class="project">
             <p class="p-org"><span class="logo-tile sm"><img src="assets/logos/pwc.svg" alt="PwC logo" loading="lazy"></span><span>PwC Middle East · Current engagement</span></p>
             <h3>Data &amp; AI Programmes</h3>
-            <ul>
-              <li>Leading the data team on large-scale data initiatives and migrations.</li>
-              <li>Defining data requirements and delivery roadmaps with business and technical stakeholders.</li>
-              <li>Supporting enterprise data warehousing, reporting, data quality and RAG-based AI solutions.</li>
-            </ul>
+            <p class="p-summary">Leading the data team on large-scale data initiatives and migrations.</p>
+            <details class="more"><summary>More details</summary>
+              <ul>
+                <li>Defining data requirements and delivery roadmaps with business and technical stakeholders.</li>
+                <li>Supporting enterprise data warehousing, reporting, data quality and RAG-based AI solutions.</li>
+              </ul>
+            </details>
             <p class="tags"><span>Databricks Mosaic AI</span><span>RAG</span><span>ADF</span><span>Power BI</span></p>
           </article>
 
           <article class="project">
             <p class="p-org"><span class="logo-tile sm"><img src="assets/logos/juma-al-majid.png" alt="Juma Al Majid logo" loading="lazy"></span><span>Juma Al Majid</span></p>
             <h3>Continuous Monitoring Framework for Audit Analytics</h3>
-            <ul>
-              <li>Architected automated ETL/ELT pipelines integrating Oracle, Yardi, Odoo and Keyloop ERPs via Azure Data Factory and SQL Server.</li>
-              <li>Enabled exception-based and population-level audit testing across four business units: Commercial, Real Estate, C&amp;S and Oman.</li>
-              <li>Ran cost analysis to keep the solution scalable and cost-effective.</li>
-            </ul>
+            <p class="p-summary">Architected automated ETL/ELT pipelines integrating Oracle, Yardi, Odoo and Keyloop ERPs via Azure Data Factory and SQL Server.</p>
+            <details class="more"><summary>More details</summary>
+              <ul>
+                <li>Enabled exception-based and population-level audit testing across four business units: Commercial, Real Estate, C&amp;S and Oman.</li>
+                <li>Ran cost analysis to keep the solution scalable and cost-effective.</li>
+              </ul>
+            </details>
             <p class="tags"><span>ADF</span><span>Databricks</span><span>Arbutus</span><span>Power BI</span><span>Azure SQL</span></p>
           </article>
 
           <article class="project">
             <p class="p-org"><span class="logo-tile sm"><img src="assets/logos/strategyand.svg" alt="Strategy&amp; logo" loading="lazy"></span><span>Strategy&amp; Middle East</span></p>
             <h3>Enterprise Databricks Lakehouse &amp; Digital AI Solutions</h3>
-            <ul>
-              <li>Led implementation of an enterprise Databricks Lakehouse with Unity Catalog governance, RBAC, cluster policies and Key Vault-backed secret scopes.</li>
-              <li>Built 50+ production pipelines orchestrated by Azure Data Factory with PySpark notebooks and Delta Live Tables.</li>
-              <li>Owned end-to-end architecture: data modelling, workspace design, integration patterns, reporting and CI/CD deployment.</li>
-              <li>Extended the platform with Power BI Direct Lake, Power Automate and Power Apps agents; coached engineers on Lakehouse best practices.</li>
-            </ul>
+            <p class="p-summary">Led implementation of an enterprise Databricks Lakehouse with Unity Catalog governance, RBAC, cluster policies and Key Vault-backed secret scopes.</p>
+            <details class="more"><summary>More details</summary>
+              <ul>
+                <li>Built 50+ production pipelines orchestrated by Azure Data Factory with PySpark notebooks and Delta Live Tables.</li>
+                <li>Owned end-to-end architecture: data modelling, workspace design, integration patterns, reporting and CI/CD deployment.</li>
+                <li>Extended the platform with Power BI Direct Lake, Power Automate and Power Apps agents; coached engineers on Lakehouse best practices.</li>
+              </ul>
+            </details>
             <p class="tags"><span>Databricks</span><span>Unity Catalog</span><span>Delta Live Tables</span><span>ADF</span><span>Power BI</span><span>CI/CD</span></p>
           </article>
 
           <article class="project">
             <p class="p-org"><span class="logo-tile sm"><img src="assets/logos/pwc.svg" alt="PwC logo" loading="lazy"></span><span>PwC Middle East</span></p>
             <h3>Enterprise Data &amp; FP&amp;A Analytics Transformation</h3>
-            <ul>
-              <li>Architected and built an enterprise data warehouse from scratch, unifying multiple source systems for executive and FP&amp;A reporting.</li>
-              <li>Led a 10-member ETL team delivering production-grade datasets behind leadership dashboards.</li>
-              <li>Owned the FP&amp;A analytics platform used for executive reporting and recurring performance packs.</li>
-            </ul>
+            <p class="p-summary">Architected and built an enterprise data warehouse from scratch, unifying multiple source systems for executive and FP&amp;A reporting.</p>
+            <details class="more"><summary>More details</summary>
+              <ul>
+                <li>Led a 10-member ETL team delivering production-grade datasets behind leadership dashboards.</li>
+                <li>Owned the FP&amp;A analytics platform used for executive reporting and recurring performance packs.</li>
+              </ul>
+            </details>
             <p class="tags"><span>Azure SQL</span><span>ADF</span><span>Databricks</span><span>Power BI</span><span>Salesforce</span><span>SSIS</span></p>
           </article>
 
           <article class="project">
             <p class="p-org"><span class="logo-tile sm"><img src="assets/logos/cognizant.svg" alt="Cognizant logo" loading="lazy"></span><span>Cognizant</span></p>
             <h3>Cloud Data Warehouse for a Pharmaceutical Client</h3>
-            <ul>
-              <li>Built a cloud data warehouse on AWS for Bayer, integrating data from multiple source systems.</li>
-              <li>Optimised Athena SQL and orchestrated workflows with Step Functions; automated S3 file generation with Lambda and YAML config.</li>
-              <li>Loaded curated customer datasets into SAP HANA for enterprise reporting.</li>
-            </ul>
+            <p class="p-summary">Built a cloud data warehouse on AWS for Bayer, integrating data from multiple source systems.</p>
+            <details class="more"><summary>More details</summary>
+              <ul>
+                <li>Optimised Athena SQL and orchestrated workflows with Step Functions; automated S3 file generation with Lambda and YAML config.</li>
+                <li>Loaded curated customer datasets into SAP HANA for enterprise reporting.</li>
+              </ul>
+            </details>
             <p class="tags"><span>AWS S3</span><span>Athena</span><span>Glue</span><span>Lambda</span><span>SAP HANA</span></p>
           </article>
 
           <article class="project">
             <p class="p-org"><span class="logo-tile sm"><img src="assets/logos/pwc.svg" alt="PwC logo" loading="lazy"></span><span>PwC India</span></p>
             <h3>Data Engineering, Analytics &amp; Migration</h3>
-            <ul>
-              <li>Helped build a proprietary ETL and reporting platform on Azure Data Factory and Azure DW, supporting 20+ clients across industries.</li>
-              <li>Designed a generalised SSIS framework for an indirect-tax analytics platform covering GST, corporate tax and transfer pricing.</li>
-              <li>SSIS and PDW consultant for Dubai's Road and Transport Authority, delivering KPI-driven BI reporting; supported pharma data migration (Lonza).</li>
-            </ul>
+            <p class="p-summary">Helped build a proprietary ETL and reporting platform on Azure Data Factory and Azure DW, supporting 20+ clients across industries.</p>
+            <details class="more"><summary>More details</summary>
+              <ul>
+                <li>Designed a generalised SSIS framework for an indirect-tax analytics platform covering GST, corporate tax and transfer pricing.</li>
+                <li>SSIS and PDW consultant for Dubai's Road and Transport Authority, delivering KPI-driven BI reporting; supported pharma data migration (Lonza).</li>
+              </ul>
+            </details>
             <p class="tags"><span>ADF</span><span>Azure DW</span><span>SSIS</span><span>PDW</span><span>Power BI</span></p>
           </article>
 
@@ -297,7 +331,7 @@
     <!-- CASE STUDIES -->
     <section class="section" id="case-studies">
       <div class="wrap">
-        <h2 class="section-title">Case studies</h2>
+        <header class="sec-head"><p class="kicker">Case studies</p><h2>How I solve problems</h2></header>
         <div class="cases">
 
           <!-- CASE 1 -->
@@ -309,12 +343,13 @@
               <div>
                 <h4>Problem</h4>
                 <p>The audit department needed to test transactions across four business units, each running on a different ERP. Data for testing had to come together from four very different systems.</p>
-                <h4>Approach</h4>
+                <details class="more"><summary>How I approached it</summary>
                 <ul>
                   <li>Architected a continuous monitoring framework with automated ETL/ELT pipelines in Azure Data Factory and SQL Server.</li>
                   <li>Integrated Oracle, Yardi, Odoo and Keyloop data for audit analytics in Databricks and Arbutus.</li>
                   <li>Ran a cost analysis so the solution stays scalable and cost-effective.</li>
                 </ul>
+                </details>
               </div>
               <div>
                 <h4>Architecture</h4>
@@ -346,13 +381,14 @@
               <div>
                 <h4>Problem</h4>
                 <p>The firm's digital team needed an enterprise-grade platform for self-service analytics and Lakehouse modernisation, with secure, auditable access control from day one.</p>
-                <h4>Approach</h4>
+                <details class="more"><summary>How I approached it</summary>
                 <ul>
                   <li>Owned the end-to-end architecture: data modelling, workspace design, integration patterns, reporting and CI/CD deployment.</li>
                   <li>Set up Unity Catalog for governance, with RBAC, cluster policies and Key Vault-backed secret scopes.</li>
                   <li>Built a medallion architecture using Auto Loader and Delta Live Tables, orchestrated by Azure Data Factory.</li>
                   <li>Extended the platform with Power BI Direct Lake, Power Apps and Power Automate, and coached engineers on reusable Lakehouse patterns.</li>
                 </ul>
+                </details>
               </div>
               <div>
                 <h4>Architecture</h4>
@@ -384,12 +420,13 @@
               <div>
                 <h4>Problem</h4>
                 <p>Executive and FP&amp;A reporting drew on multiple source systems, including Salesforce and Sage. Leadership needed one unified data model behind its dashboards and recurring performance packs.</p>
-                <h4>Approach</h4>
+                <details class="more"><summary>How I approached it</summary>
                 <ul>
                   <li>Designed and built an enterprise data warehouse from scratch, with a unified dimensional model (Erwin).</li>
                   <li>Led a 10-member ETL team delivering production-grade datasets with Azure Data Factory, SSIS and Databricks.</li>
                   <li>Translated business requirements into enterprise dashboards, reporting frameworks and governance-ready analytics layers.</li>
                 </ul>
+                </details>
               </div>
               <div>
                 <h4>Architecture</h4>
@@ -418,7 +455,7 @@
     <!-- EDUCATION -->
     <section class="section alt" id="education">
       <div class="wrap two-col">
-        <h2 class="section-title">Education</h2>
+        <header class="sec-head"><p class="kicker">Education</p><h2>Where it started</h2></header>
         <div>
           <h3 class="edu-title">B.E. in Computer Science and Technology</h3>
           <p class="t-org">Indian Institute of Engineering Science and Technology, Shibpur · 2009 – 2013</p>
@@ -428,14 +465,14 @@
 
     <!-- CONTACT -->
     <section class="section contact" id="contact">
-      <div class="wrap contact-inner">
+      <div class="wrap"><div class="contact-card">
         <h2>Let's talk data.</h2>
         <p>Open to conversations about data platforms, lakehouse modernisation, analytics and AI. The quickest way to reach me is email or LinkedIn.</p>
         <div class="cta-row center">
           <a class="btn btn-primary" href="mailto:amit@amitroy.app">amit@amitroy.app</a>
           <a class="btn btn-ghost" href="https://www.linkedin.com/in/amit-roy-08271a39" target="_blank" rel="noopener">Connect on LinkedIn ↗</a>
         </div>
-      </div>
+      </div></div>
     </section>
   </main>
 
@@ -444,5 +481,28 @@
   </footer>
 
   <script>document.getElementById('yr').textContent = new Date().getFullYear();</script>
+  <script>
+    (function () {
+      var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      var els = document.querySelectorAll('.sec-head, .prose, .card, .timeline > li, .project, .case, .contact-card, .stats');
+      if (reduce || !('IntersectionObserver' in window)) return;
+      els.forEach(function (el) { el.classList.add('reveal'); });
+      var io = new IntersectionObserver(function (entries) {
+        entries.forEach(function (e) {
+          if (!e.isIntersecting) return;
+          e.target.classList.add('in');
+          io.unobserve(e.target);
+          e.target.querySelectorAll && e.target.querySelectorAll('[data-count]').forEach(countUp);
+        });
+      }, { threshold: 0.12 });
+      els.forEach(function (el) { io.observe(el); });
+      function countUp(el) {
+        var end = +el.dataset.count, suffix = el.dataset.suffix || '', t0 = null;
+        function step(t) { if (!t0) t0 = t; var k = Math.min((t - t0) / 1200, 1);
+          el.textContent = Math.round(end * (1 - Math.pow(1 - k, 3))) + suffix; if (k < 1) requestAnimationFrame(step); }
+        requestAnimationFrame(step);
+      }
+    })();
+  </script>
 </body>
 </html>
