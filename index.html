@@ -504,6 +504,15 @@
       }
     })();
   </script>
+  <script>
+    // Visit amitroy.app/#toggle-goatcounter once in a browser to stop (or restart) counting your own visits there.
+    if (location.hash === '#toggle-goatcounter') {
+      try {
+        if (localStorage.getItem('skipgc') === 't') { localStorage.removeItem('skipgc'); alert('Visit counting is ON again in this browser.'); }
+        else { localStorage.setItem('skipgc', 't'); alert('Your visits are no longer counted in this browser.'); }
+      } catch (e) {}
+    }
+  </script>
   <script data-goatcounter="https://amitroy1234u.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
 </body>
 </html>
