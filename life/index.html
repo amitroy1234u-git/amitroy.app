@@ -36,7 +36,7 @@
   <main id="main">
     <section class="life-hero has-bg">
       <div class="life-bg" aria-hidden="true">
-        <img id="life-bg-img" src="bg/norway.jpg" alt="">
+        <img id="life-bg-img" src="bg/kirkjufell.jpg" alt="">
         <span class="blob w1"></span><span class="blob w2"></span><span class="blob w3"></span>
         <span class="life-shade"></span>
       </div>
@@ -45,7 +45,7 @@
         <h1>Life</h1>
         <p class="lede">Away from data platforms, this is where I keep the rest of my life: family, books, music and travel.</p>
       </div>
-      <p class="life-bg-caption"><a id="life-bg-place" href="places/">📍 Norway · Northern lights</a><span class="sep">·</span><a id="life-bg-credit" class="credit" href="https://commons.wikimedia.org/wiki/File:Northern_lights_curtains_and_beams_over_Nordmo_in_Bjerkvik,_Narvik,_Nordland,_Norway,_2023_September.jpg" target="_blank" rel="noopener">Photo: Ximonic (Simo Räsänen), CC BY-SA 4.0</a></p>
+      <p class="life-bg-caption"><a id="life-bg-place" href="places/">📍 Iceland · Kirkjufell</a></p>
     </section>
 
     <section class="section about-me">
@@ -102,20 +102,20 @@
   <script>
     (function () {
       var photos = [
-        ['norway.jpg', 'Norway · Northern lights', '50% 40%', 'Ximonic (Simo Räsänen)', 'CC BY-SA 4.0', 'https://commons.wikimedia.org/wiki/File:Northern_lights_curtains_and_beams_over_Nordmo_in_Bjerkvik,_Narvik,_Nordland,_Norway,_2023_September.jpg'],
-        ['japan.jpg', 'Japan · Chureito Pagoda & Mount Fuji', '50% 35%', 'Dang Son', 'CC0', 'https://commons.wikimedia.org/wiki/File:12-Chureito-pagoda-and-Mount-Fuji-Japan_(29677439878).jpg'],
-        ['italy.jpg', 'Italy · Grand Canal, Venice', '50% 45%', 'Wolfgang Moroder', 'CC BY-SA 3.0', 'https://commons.wikimedia.org/wiki/File:Canal_Grande_Chiesa_della_Salute_e_Dogana_dal_ponte_dell_Accademia.jpg'],
-        ['switzerland.jpg', 'Switzerland · Lauterbrunnen', '50% 40%', 'Keith Halstead', 'CC BY-SA 3.0', 'https://commons.wikimedia.org/wiki/File:Lauterbrunnen-valley.jpg'],
-        ['iceland.jpg', 'Iceland · Kirkjufell', '50% 40%', 'Jakub Hałun', 'CC BY 4.0', 'https://commons.wikimedia.org/wiki/File:Kirkjufell,_Iceland,_20240714_1631_0713.jpg']
+        ['kirkjufell.jpg', 'Iceland · Kirkjufell', '50% 35%'],
+        ['niagara.jpg', 'USA · Niagara Falls', '50% 55%'],
+        ['dubai-frame.jpg', 'UAE · Dubai Frame', '50% 40%'],
+        ['paris.jpg', 'France · Paris from the Eiffel Tower', '50% 45%'],
+        ['chureito.jpg', 'Japan · Chureito Pagoda & Mount Fuji', '70% 62%'],
+        ['himeji.jpg', 'Japan · Himeji, from the castle', '50% 45%'],
+        ['fuji.jpg', 'Japan · Mount Fuji', '60% 40%']
       ];
       var pick = photos[Math.floor(Math.random() * photos.length)];
-      var img = document.getElementById('life-bg-img');
-      var place = document.getElementById('life-bg-place'), credit = document.getElementById('life-bg-credit');
+      var img = document.getElementById('life-bg-img'), place = document.getElementById('life-bg-place');
       if (!img) return;
       img.src = 'bg/' + pick[0];
       img.style.objectPosition = pick[2];
       if (place) place.textContent = '📍 ' + pick[1];
-      if (credit) { credit.textContent = 'Photo: ' + pick[3] + ', ' + pick[4]; credit.href = pick[5]; }
     })();
   </script>
 </body>
